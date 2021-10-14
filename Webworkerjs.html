@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="Numbers">Counting Numbers</h1>
+        <p>
+           <button type="submit" onclick="startworker()" id="btn1">Click to start Process</button>
+        </p>
+        <p>
+            <button type="submit" onclick="stopworker()" id="btn2">Click to stop Process</button>
+        </p>
+        <script>
+          let w;
+          function startworker(){
+                if(typeof(w)=="undefined"){
+                    w=new Worker ("demoworker.js");
+                }
+                w.onmessage=function(event){
+                    document.getElementById("Numbers").innerHTML=event.data;
+                }
+          }
+
+          function stopworker(){
+                w.terminate();
+                w=undefined;
+         }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Implementing Collection of values as set in Js</p>
+        <p id="Setval"></p>
+        <script>
+            const names=new Set(["Pushpa","Kavi","Mahi","Nag","Pushpa"]);
+            let Letter= " ";
+            names.forEach(function(value){
+                Letter +=value + "</br>";
+            })
+            document.getElementById("Setval").innerHTML=Letter;
+
+        </script>
+    </body>
+</html>

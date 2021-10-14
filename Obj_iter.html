@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Js Iterable</h2>
+        <p>Iterable over an array</p>
+        <p id="demo"></p>
+        <script>
+            const cities=["Delhi","Hyd","Mumbai","Chennai","Banglore"];
+            var text="";
+            for(const x of cities){
+                text += x + "<br>";
+            }
+            document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

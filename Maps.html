@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Implementing Maps using Set() in Js</h1>
+        <p id="demo"></p>
+    <script>
+        const dresses = new Map();
+        dresses.set("Shirt",1000);
+        dresses.set("Saree",2000);
+        dresses.set("Jump suit",1500);
+        let text=" ";
+        dresses.forEach(function(value,key){
+        text += key + '='+value+ "<br>";
+        })
+        document.getElementById("demo").innerHTML=text;
+    </script>    </body>
+</html>
